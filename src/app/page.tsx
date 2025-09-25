@@ -46,17 +46,19 @@ export default function Dashboard() {
 
       <div className="grid gap-6 md:grid-cols-3">
         {navLinks.map((link) => (
-          <Link href={link.href} key={link.href} legacyBehavior>
-            <a className="block transition-transform hover:scale-105">
-              <Card className="bg-accent text-accent-foreground hover:bg-accent/90">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-4">
-                    {link.icon}
-                    <span>{link.title}</span>
-                  </CardTitle>
-                </CardHeader>
-              </Card>
-            </a>
+          <Link
+            href={link.href}
+            key={link.href}
+            className="block transition-transform hover:scale-105"
+          >
+            <Card className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-4">
+                  {link.icon}
+                  <span>{link.title}</span>
+                </CardTitle>
+              </CardHeader>
+            </Card>
           </Link>
         ))}
       </div>
